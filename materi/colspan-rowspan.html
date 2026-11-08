@@ -1,0 +1,36 @@
+<!-- Deklarasi: memberi tahu browser bahwa ini dokumen HTML5. -->
+<!DOCTYPE html>
+<!-- Elemen akar. lang="id" = bahasa halaman adalah Indonesia. -->
+<html lang="id">
+<head>
+  <!-- HEAD: informasi tentang halaman (tidak tampil di layar). -->
+  <!-- Encoding karakter agar huruf khusus tampil benar. -->
+  <meta charset="UTF-8">
+  <!-- Membuat halaman menyesuaikan lebar layar di HP. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Judul halaman (tampil di tab browser jika dibuka sendiri). -->
+  <title>Colspan & Rowspan - Modul HTML</title>
+  <!-- Menghubungkan ke style-materi.css (gaya bersama semua materi). -->
+  <link rel="stylesheet" href="style-materi.css">
+</head>
+<!-- BODY: semua yang tampil di layar. -->
+<body>
+  <!-- ARTICLE: pembungkus seluruh isi materi. -->
+  <article class="article">
+    <!-- Label kategori kecil di atas judul. -->
+    <span class="kicker">03 · STRUKTUR TABEL</span>
+    <!-- Judul utama materi. -->
+    <h1>Colspan & Rowspan</h1>
+    
+<!-- Paragraf penjelasan. -->
+<p>Atribut <code>colspan</code> menggabungkan beberapa kolom, sedangkan <code>rowspan</code> menggabungkan beberapa baris.</p>
+<!-- Kotak contoh. Bagian .demo adalah hasil tampilan sungguhan dari elemen HTML-nya. -->
+<div class="example"><p class="example-title">CONTOH TAMPILAN</p><div class="demo"><table><tr><th colspan="2">Data Siswa</th></tr><tr><td>Nama</td><td>Farzan</td></tr><tr><td rowspan="2">Pelajaran</td><td>HTML</td></tr><tr><td>CSS</td></tr></table></div></div>
+<!-- Blok kode: <pre> mempertahankan spasi dan baris baru, <code> menandai teks sebagai kode.
+     Tanda < dan > ditulis &lt; dan &gt; agar tampil sebagai teks, bukan dianggap tag. -->
+<pre><code>&lt;th colspan="2"&gt;Data Siswa&lt;/th&gt;
+&lt;td rowspan="2"&gt;Pelajaran&lt;/td&gt;</code></pre>
+
+  </article>
+</body>
+</html>

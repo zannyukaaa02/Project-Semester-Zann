@@ -1,0 +1,77 @@
+/* =====================================================
+   style-materi.css
+   Gaya bersama untuk SEMUA halaman materi (isi iframe).
+   Setiap file di folder materi/ memanggil file ini lewat <link>.
+   ===================================================== */
+
+/* Semua elemen: padding dan border dihitung masuk ke lebar elemen,
+   jadi ukuran kotak lebih mudah diprediksi. */
+* { box-sizing: border-box; }
+
+/* Pengaturan dasar seluruh halaman materi:
+   margin 0 = hilangkan jarak bawaan browser,
+   padding = jarak isi ke tepi halaman,
+   line-height = jarak antar baris supaya teks nyaman dibaca. */
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #000;
+  background: #fff;
+}
+
+/* Pembungkus isi materi (<article class="article">).
+   max-width membatasi lebar teks agar tidak terlalu melebar di layar besar,
+   margin auto membuatnya berada di tengah. */
+.article { max-width: 900px; margin: 0 auto; }
+
+/* Label kecil di atas judul, contoh: "01 · ELEMENT & TEKS DASAR". */
+.kicker { font-size: 12px; font-weight: bold; letter-spacing: 1px; color: #555; }
+
+/* Judul utama halaman. */
+h1 { margin: 6px 0 10px; font-size: 30px; line-height: 1.2; }
+
+/* Subjudul, diberi garis tipis di bawahnya. */
+h2 { margin-top: 28px; padding-bottom: 6px; border-bottom: 1px solid #999; font-size: 21px; }
+
+/* Kotak tips/catatan: garis kiri tebal sebagai penanda. */
+.callout {
+  margin: 18px 0;
+  padding: 12px 16px;
+  border: 1px solid #999;
+  border-left: 4px solid #000;
+  background: #f5f5f5;
+}
+
+/* Kotak pembungkus satu contoh. */
+.example { margin: 14px 0; padding: 14px; border: 1px solid #999; }
+
+/* Tulisan kecil di atas contoh: "CONTOH TAMPILAN" atau "KODE HTML". */
+.example-title { margin: 0 0 8px; font-size: 12px; font-weight: bold; letter-spacing: 1px; color: #555; }
+
+/* Area hasil demo (elemen HTML sungguhan), berbingkai garis putus-putus. */
+.demo { padding: 14px; border: 1px dashed #999; }
+
+/* Blok kode (<pre>): kalau kodenya panjang, muncul scroll horizontal
+   (overflow-x: auto), bukan merusak lebar halaman. */
+pre {
+  overflow-x: auto;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #999;
+  background: #f5f5f5;
+  font: 13px/1.6 Consolas, monospace;
+}
+
+/* Kode di dalam kalimat (<code>) memakai font monospace. */
+code { font-family: Consolas, monospace; }
+
+/* Tabel: border-collapse menyatukan garis antar sel menjadi satu garis. */
+table { width: 100%; border-collapse: collapse; margin: 14px 0; }
+
+/* Sel tabel: <th> (judul kolom) dan <td> (data). */
+th, td { padding: 8px 12px; border: 1px solid #999; text-align: left; }
+
+/* Judul kolom diberi latar abu-abu supaya terbedakan dari data. */
+th { background: #eee; }

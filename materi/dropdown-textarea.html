@@ -1,0 +1,40 @@
+<!-- Deklarasi: memberi tahu browser bahwa ini dokumen HTML5. -->
+<!DOCTYPE html>
+<!-- Elemen akar. lang="id" = bahasa halaman adalah Indonesia. -->
+<html lang="id">
+<head>
+  <!-- HEAD: informasi tentang halaman (tidak tampil di layar). -->
+  <!-- Encoding karakter agar huruf khusus tampil benar. -->
+  <meta charset="UTF-8">
+  <!-- Membuat halaman menyesuaikan lebar layar di HP. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Judul halaman (tampil di tab browser jika dibuka sendiri). -->
+  <title>Dropdown & Textarea - Modul HTML</title>
+  <!-- Menghubungkan ke style-materi.css (gaya bersama semua materi). -->
+  <link rel="stylesheet" href="style-materi.css">
+</head>
+<!-- BODY: semua yang tampil di layar. -->
+<body>
+  <!-- ARTICLE: pembungkus seluruh isi materi. -->
+  <article class="article">
+    <!-- Label kategori kecil di atas judul. -->
+    <span class="kicker">04 · FORMULIR & INTERAKTIF</span>
+    <!-- Judul utama materi. -->
+    <h1>Dropdown & Textarea</h1>
+    
+<!-- Paragraf penjelasan. -->
+<p><code>&lt;select&gt;</code> membuat pilihan dropdown. <code>&lt;textarea&gt;</code> membuat kotak teks yang dapat menampung tulisan lebih panjang.</p>
+<!-- Kotak contoh. Bagian .demo adalah hasil tampilan sungguhan dari elemen HTML-nya. -->
+<div class="example"><p class="example-title">CONTOH TAMPILAN</p><div class="demo"><label>Pilih jurusan: <select><option>RPL</option><option>TKJ</option><option>DKV</option></select></label><p><label>Catatan:<br><textarea rows="4" placeholder="Tulis catatan di sini"></textarea></label></p></div></div>
+<!-- Blok kode: <pre> mempertahankan spasi dan baris baru, <code> menandai teks sebagai kode.
+     Tanda < dan > ditulis &lt; dan &gt; agar tampil sebagai teks, bukan dianggap tag. -->
+<pre><code>&lt;select name="jurusan"&gt;
+  &lt;option&gt;RPL&lt;/option&gt;
+  &lt;option&gt;TKJ&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;textarea rows="4"&gt;&lt;/textarea&gt;</code></pre>
+
+  </article>
+</body>
+</html>

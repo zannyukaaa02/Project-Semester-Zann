@@ -1,0 +1,38 @@
+<!-- Deklarasi: memberi tahu browser bahwa ini dokumen HTML5. -->
+<!DOCTYPE html>
+<!-- Elemen akar. lang="id" = bahasa halaman adalah Indonesia. -->
+<html lang="id">
+<head>
+  <!-- HEAD: informasi tentang halaman (tidak tampil di layar). -->
+  <!-- Encoding karakter agar huruf khusus tampil benar. -->
+  <meta charset="UTF-8">
+  <!-- Membuat halaman menyesuaikan lebar layar di HP. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Judul halaman (tampil di tab browser jika dibuka sendiri). -->
+  <title>Paragraf - Modul HTML</title>
+  <!-- Menghubungkan ke style-materi.css (gaya bersama semua materi). -->
+  <link rel="stylesheet" href="style-materi.css">
+</head>
+<!-- BODY: semua yang tampil di layar. -->
+<body>
+  <!-- ARTICLE: pembungkus seluruh isi materi. -->
+  <article class="article">
+    <!-- Label kategori kecil di atas judul. -->
+    <span class="kicker">01 · ELEMENT & TEKS DASAR</span>
+    <!-- Judul utama materi. -->
+    <h1>Paragraf</h1>
+    
+<!-- Paragraf penjelasan. -->
+<p>Paragraf digunakan untuk menampilkan kumpulan kalimat. Tag yang digunakan adalah <code>&lt;p&gt;</code>.</p>
+<!-- Kotak contoh. Bagian .demo adalah hasil tampilan sungguhan dari elemen HTML-nya. -->
+<div class="example"><p class="example-title">CONTOH TAMPILAN</p><div class="demo"><p>HTML digunakan untuk membuat struktur halaman web.</p><p>Setiap paragraf ditulis menggunakan elemen p.</p></div></div>
+<!-- Subjudul. -->
+<h2>Contoh kode</h2><!-- Blok kode: <pre> mempertahankan spasi dan baris baru, <code> menandai teks sebagai kode.
+     Tanda < dan > ditulis &lt; dan &gt; agar tampil sebagai teks, bukan dianggap tag. -->
+<pre><code>&lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
+&lt;p&gt;Ini adalah paragraf kedua.&lt;/p&gt;</code></pre>
+<p>Browser secara otomatis memberi jarak sebelum dan sesudah paragraf.</p>
+
+  </article>
+</body>
+</html>

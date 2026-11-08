@@ -1,0 +1,41 @@
+<!-- Deklarasi: memberi tahu browser bahwa ini dokumen HTML5. -->
+<!DOCTYPE html>
+<!-- Elemen akar. lang="id" = bahasa halaman adalah Indonesia. -->
+<html lang="id">
+<head>
+  <!-- HEAD: informasi tentang halaman (tidak tampil di layar). -->
+  <!-- Encoding karakter agar huruf khusus tampil benar. -->
+  <meta charset="UTF-8">
+  <!-- Membuat halaman menyesuaikan lebar layar di HP. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Judul halaman (tampil di tab browser jika dibuka sendiri). -->
+  <title>Tag Heading - Modul HTML</title>
+  <!-- Menghubungkan ke style-materi.css (gaya bersama semua materi). -->
+  <link rel="stylesheet" href="style-materi.css">
+</head>
+<!-- BODY: semua yang tampil di layar. -->
+<body>
+  <!-- ARTICLE: pembungkus seluruh isi materi. -->
+  <article class="article">
+    <!-- Label kategori kecil di atas judul. -->
+    <span class="kicker">01 · ELEMENT & TEKS DASAR</span>
+    <!-- Judul utama materi. -->
+    <h1>Tag Heading</h1>
+    
+<!-- Paragraf penjelasan. -->
+<p>Heading adalah elemen untuk membuat judul dan subjudul. HTML menyediakan enam tingkat heading, dari <code>&lt;h1&gt;</code> sampai <code>&lt;h6&gt;</code>.</p>
+<!-- Kotak contoh. Bagian .demo adalah hasil tampilan sungguhan dari elemen HTML-nya. -->
+<div class="example"><p class="example-title">CONTOH TAMPILAN</p><div class="demo"><h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6></div></div>
+<!-- Subjudul. -->
+<h2>Contoh penulisan</h2>
+<!-- Blok kode: <pre> mempertahankan spasi dan baris baru, <code> menandai teks sebagai kode.
+     Tanda < dan > ditulis &lt; dan &gt; agar tampil sebagai teks, bukan dianggap tag. -->
+<pre><code>&lt;h1&gt;Judul Utama&lt;/h1&gt;
+&lt;h2&gt;Subjudul&lt;/h2&gt;
+&lt;h3&gt;Bagian Materi&lt;/h3&gt;</code></pre>
+<!-- Kotak tips/catatan. -->
+<div class="callout">Gunakan heading sesuai urutan struktur isi. Biasanya satu halaman memiliki satu judul utama <code>h1</code>.</div>
+
+  </article>
+</body>
+</html>

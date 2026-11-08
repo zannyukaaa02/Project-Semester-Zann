@@ -1,0 +1,111 @@
+
+
+/* Semua elemen: padding dan border dihitung masuk ke lebar elemen. */
+* { box-sizing: border-box; }
+
+/* Hilangkan margin bawaan browser agar halaman rapat ke tepi. */
+html, body { margin: 0; min-height: 100%; }
+
+/* Pengaturan dasar teks dan warna seluruh halaman. */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #000;
+  background: #fff;
+}
+
+
+
+
+/* ---------- HEADER (bagian atas) ---------- */
+
+/* Kotak header: latar abu-abu muda dengan garis di bawahnya. */
+.site-header { padding: 16px 24px; border-bottom: 1px solid #999; background: #eee; }
+
+/* Jarak antar baris teks di dalam header. */
+.site-header p { margin: 4px 0; }
+
+/* Judul besar di header: "project akhir semester". */
+.banner-title { font-size: 22px; text-align: center;}
+
+
+
+
+/* ---------- TATA LETAK (menu kiri + isi kanan) ---------- */
+
+/* display: flex membuat menu dan isi sejajar ke samping (kiri-kanan).
+   min-height membuat area ini minimal setinggi sisa layar di bawah header. */
+.app-layout { display: flex; min-height: calc(100vh - 150px); }
+
+/* Menu kiri: lebar tetap 260px (flex: 0 0 260px = tidak membesar/mengecil),
+   dipisahkan dari isi dengan garis di sisi kanan. */
+.sidebar { width: 260px; flex: 0 0 260px; padding: 16px 20px; border-right: 1px solid #999; }
+
+/* Judul menu: "  HTML Tutorial". */
+.sidebar h2 { margin: 4px 0 12px; font-size: 18px; }
+
+
+
+
+
+/* ---------- MENU NAVIGASI ---------- */
+
+/* Satu kelompok menu (contoh: "01 · ELEMENT & TEKS DASAR"). */
+.nav-group { margin-bottom: 14px; }
+
+/* Judul kelompok menu. */
+.nav-group h3 { margin: 0 0 4px; font-size: 12px; letter-spacing: 1px; color: #555; }
+
+/* Satu link menu. display: block membuat link memenuhi satu baris penuh,
+   sehingga seluruh barisnya bisa diklik. */
+.nav-link { display: block; padding: 6px 10px; color: #000; text-decoration: none; font-size: 14px; }
+
+/* Efek saat kursor berada di atas link. */
+.nav-link:hover { background: #eee; }
+
+/* :focus aktif pada link yang baru saja diklik, jadi link itu tetap
+   tersorot sampai kamu mengklik di tempat lain. */
+.nav-link:focus { outline: 0; background: #ddd; font-weight: bold; }
+
+/* Menu "Beranda" ditandai aktif sejak halaman pertama dibuka
+   (class "active" ditulis langsung di index.html). */
+.nav-link.active { background: #ddd; font-weight: bold; }
+
+/* Begitu salah satu link lain diklik (:has(.nav-link:focus)),
+   sorotan awal pada "Beranda" dimatikan supaya tidak ada dua menu yang tersorot. */
+.lesson-nav:has(.nav-link:focus) .nav-link.active:not(:focus) { background: none; font-weight: normal; }
+
+
+
+
+
+/* ---------- AREA ISI (iframe) ---------- */
+
+/* Area kanan mengambil sisa lebar (flex: 1).
+   min-width: 0 mencegah isi melebar keluar layar. */
+.main-content { flex: 1; min-width: 0; padding: 16px; }
+
+/* Iframe memenuhi lebar area kanan. Tingginya mengikuti tinggi layar
+   dikurangi tinggi header. display: block menghilangkan celah kecil di bawahnya. */
+.main-content iframe {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 180px);
+  min-height: 500px;
+  border: 1px solid #999;
+  background: #fff;
+}
+
+
+
+
+/* ---------- LAYAR KECIL (HP) ---------- */
+
+/* Aturan di dalam blok ini hanya berlaku jika lebar layar 700px atau kurang:
+   menu pindah ke atas, iframe di bawahnya. */
+@media (max-width: 700px) {
+  .app-layout { display: block; }
+  .sidebar { width: auto; border-right: 0; border-bottom: 1px solid #999; }
+  .main-content { padding: 12px; }
+  .main-content iframe { height: 70vh; min-height: 420px; }
+}

@@ -1,0 +1,85 @@
+<!-- Deklarasi: memberi tahu browser bahwa ini dokumen HTML5. -->
+<!DOCTYPE html>
+<!-- Elemen akar. lang="id" = bahasa halaman adalah Indonesia. -->
+<html lang="id">
+<head>
+  <!-- HEAD: informasi tentang halaman (tidak tampil di layar). -->
+  <!-- Encoding karakter agar huruf seperti "·" dan "✦" tampil benar. -->
+  <meta charset="UTF-8">
+  <!-- Membuat halaman menyesuaikan lebar layar di HP. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Deskripsi singkat halaman (dipakai mesin pencari). -->
+  <meta name="description" content="Modul pembelajaran HTML.">
+  <!-- Judul yang tampil di tab browser. -->
+  <title>Modul Belajar HTML</title>
+  <!-- Menghubungkan halaman dengan file CSS. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<!-- BODY: semua yang tampil di layar. -->
+<body>
+  <header class="site-header">
+    <!-- Judul besar dan kalimat pengantar. -->
+    <p class="banner-title"><strong>Project Akhir Semester</strong></p>
+  </header>
+
+
+  <!-- Pembungkus tata letak: menu di kiri, isi di kanan (diatur oleh CSS flex). -->
+  <div class="app-layout">
+    <!-- SIDEBAR: kolom menu di sebelah kiri. -->
+    <aside class="sidebar">
+      <p class="eyebrow">DAFTAR MATERI</p>
+      <h2>HTML Tutorial</h2>
+
+
+      <!-- NAV: daftar link materi, dibagi dalam 4 kelompok. -->
+      <nav class="lesson-nav" aria-label="Navigasi materi">
+        <!-- Satu kelompok menu: judul (h3) dan link-link materinya. -->
+        <section class="nav-group">
+          <h3>01 · ELEMENT &amp; TEKS DASAR</h3>
+          <!-- href = file materi yang dituju; target="contentFrame" = tampilkan di iframe.
+               class="active" = penanda menu yang sedang terbuka saat halaman pertama dibuka. -->
+
+          <a class="nav-link active" href="materi/home.html" target="contentFrame">Beranda</a>
+          <a class="nav-link" href="materi/heading.html" target="contentFrame">Tag Heading</a>
+          <a class="nav-link" href="materi/paragraf.html" target="contentFrame">Paragraf</a>
+          <a class="nav-link" href="materi/format-teks.html" target="contentFrame">Format Teks</a>
+        </section>
+
+        <section class="nav-group">
+          <h3>02 · DAFTAR &amp; NAVIGASI</h3>
+          <a class="nav-link" href="materi/ordered-list.html" target="contentFrame">Ordered List</a>
+          <a class="nav-link" href="materi/unordered-list.html" target="contentFrame">Unordered List</a>
+          <a class="nav-link" href="materi/hyperlink.html" target="contentFrame">Hyperlink</a>
+        </section>
+
+        <section class="nav-group">
+          <h3>03 · STRUKTUR TABEL</h3>
+          <a class="nav-link" href="materi/baris-tabel.html" target="contentFrame">Baris Tabel</a>
+          <a class="nav-link" href="materi/header-tabel.html" target="contentFrame">Header Tabel</a>
+          <a class="nav-link" href="materi/colspan-rowspan.html" target="contentFrame">Colspan &amp; Rowspan</a>
+        </section>
+
+        <section class="nav-group">
+          <h3>04 · FORMULIR &amp; INTERAKTIF</h3>
+          <a class="nav-link" href="materi/input-text-password.html" target="contentFrame">Input Text &amp; Password</a>
+          <a class="nav-link" href="materi/radio-checkbox.html" target="contentFrame">Radio &amp; Checkbox</a>
+          <a class="nav-link" href="materi/dropdown-textarea.html" target="contentFrame">Dropdown &amp; Textarea</a>
+        </section>
+      </nav>
+    </aside>
+
+
+    <!-- MAIN: area kanan tempat materi ditampilkan. -->
+    <main class="main-content">
+      <!-- IFRAME: "jendela" yang menampilkan halaman lain.
+           name="contentFrame" adalah namanya. Setiap link menu memakai target="contentFrame",
+           jadi saat diklik, materi tampil di sini dan menu di kiri tidak ikut berganti.
+           src = halaman yang tampil pertama kali (Beranda). -->
+      <iframe name="contentFrame" src="materi/home.html" title="Konten materi HTML"></iframe>
+    </main>
+  </div>
+</body>
+</html>
