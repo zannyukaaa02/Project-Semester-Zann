@@ -1,4 +1,5 @@
-WEBSITE BELAJAR HTML (POLOS)
+PROJECT AKHIR SEMESTER FARZAN RAFA NAUFALDI
+===================10A=====================
 
 Hanya HTML dan CSS, tanpa JavaScript.
 Buka index.html di browser. Klik materi di menu kiri, isinya tampil di area kanan (iframe).
